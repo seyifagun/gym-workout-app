@@ -1,0 +1,2 @@
+#create folders for both backend and frontend
+### create a server.js file in the backend folder||for api logic and ||Initiate the package.json file with - "npm init -y to keep track of dependencies"
