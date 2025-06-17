@@ -26,15 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <>
-      <WorkoutsContextProvider>
-        <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Navbar />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <WorkoutsContextProvider>
+          <Navbar />
           {children}
-        </body>
-      </WorkoutsContextProvider>
-      </>
+        </WorkoutsContextProvider>
+      </body>
     </html>
   );
 }
