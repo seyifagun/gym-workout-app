@@ -15,13 +15,13 @@ export default function Home() {
   useEffect(() => {
     const fetchWorkouts = async () => {
       try {
-        const res = await fetch("http://localhost:4114/api/workouts");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/workouts`);
         const json = await res.json();
   
         if (res.ok) {
           //setWorkouts(json);
           dispatch({type: "SET_WORKOUTS", payload: json});
-          console.log("Fetched workouts:", json); // Better logging
+          console.log("Fetched workouts:", json); // Better logging...
         } else {
           console.error("Fetch failed:", json);
         }
